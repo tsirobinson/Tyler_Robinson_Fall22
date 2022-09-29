@@ -1,5 +1,5 @@
 #include "CodaApp.h"
-#include <iostream>
+#include "pch.h"
 
 namespace Coda {
 	void CodaApp::OnUpdate() {
