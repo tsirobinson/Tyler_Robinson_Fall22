@@ -138,6 +138,7 @@
     <ClInclude Include="Coda.h" />
     <ClInclude Include="CodaApp.h" />
     <ClInclude Include="CodaUtil.h" />
+    <ClInclude Include="CodaWindow.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
