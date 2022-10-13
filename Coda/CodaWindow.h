@@ -2,6 +2,7 @@
 
 #include "pch.h"
 #include "CodaUtil.h"
+#include "WindowImplementation.h"
 
 namespace Coda
 {
