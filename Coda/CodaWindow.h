@@ -8,7 +8,7 @@ namespace Coda
 	class CODA_API CodaWindow
 	{
 	public:
-		void Init();
+		static void Init();
 		CodaWindow* GetWindow();
 		
 		void Create(int width, int height, const std::string& windowName);
