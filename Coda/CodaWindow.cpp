@@ -4,6 +4,13 @@
 
 namespace Coda
 {
+  static void CodaWindow::Init(){
+   if(mInstance==nullptr){
+     mInstance = new CodaWindow(); 
+     //mInstance->mImplementation
+   }
+  }
+  
   CodaWindow* CodaWindow::GetWindow(){
     return mInstance;
   }
@@ -13,10 +20,6 @@ namespace Coda
   
   void CodaWindow::SwapBuffers(){
     mImplementation->SwapBuffers();
-  }
-  
-  static void CodaWindow::Init(){
-   if(mInstance==nullptr) 
   }
   
 }
