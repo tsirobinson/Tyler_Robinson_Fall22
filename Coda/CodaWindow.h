@@ -16,5 +16,6 @@ namespace Coda
 	private:
 		CodaWindow();
 		inline static CodaWindow* instance{ nullptr };
+		WindowImplementation* implementation{ nullptr };
 	};
 }
