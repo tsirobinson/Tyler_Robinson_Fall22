@@ -14,4 +14,9 @@ namespace Coda
   void CodaWindow::SwapBuffers(){
     mImplementation->SwapBuffers();
   }
+  
+  static void CodaWindow::Init(){
+   if(mInstance==nullptr) 
+  }
+  
 }
