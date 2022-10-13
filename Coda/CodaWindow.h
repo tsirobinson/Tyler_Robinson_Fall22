@@ -15,7 +15,7 @@ namespace Coda
 		void SwapBuffers();
 	private:
 		CodaWindow();
-		inline static CodaWindow* instance{ nullptr };
-		WindowImplementation* implementation{ nullptr };
+		inline static CodaWindow* mInstance{ nullptr };
+		WindowImplementation* mImplementation{ nullptr };
 	};
 }
