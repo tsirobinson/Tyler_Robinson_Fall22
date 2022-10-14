@@ -30,12 +30,21 @@
     <ClInclude Include="CodaWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="WindowImplementation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLFWcode\GLFWwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CodaApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CodaWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,17 +1,26 @@
 #include "pch.h"
 
 #include "CodaWindow.h"
+#include "GLFWcode/GLFWimplementation.h"
 
 namespace Coda {
 	void CodaWindow::Init() {
 		if (mInstance == nullptr) {
 			mInstance = new CodaWindow;
-			//mInstance->mImplementation
+
+#ifdef CODA_WINDOWS
+			mInstance->mImplementation = new GLFWimplementation;
+#elif defined CODA_MAC
+			mInstance->mImplementation = new GLFWimplementation;
+#else 
+			mInstance->mImplementation = new GLFWimplementation;
+#endif
+
 		}
 	}
 
-	CodaWindow* CodaWindow::GetWindow() {
-		return mInstance;
+	WindowImplementation* CodaWindow::GetWindow() {
+		return mInstance->mImplementation;
 	}
 
 	void CodaWindow::Create(int width, int height, const std::string& windowName) {

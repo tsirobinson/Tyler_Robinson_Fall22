@@ -10,7 +10,7 @@ namespace Coda
 	{
 	public:
 		static void Init();
-		CodaWindow* GetWindow();
+		static WindowImplementation* GetWindow();
 		
 		void Create(int width, int height, const std::string& windowName);
 		void SwapBuffers();
