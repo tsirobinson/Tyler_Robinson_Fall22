@@ -15,10 +15,12 @@ namespace Coda {
 
 		CodaWindow::Init();
 		CodaWindow::GetWindow()->Create(600, 400, "Test window");
+		//CodaWindow gameWindow;
+		//gameWindow.Create(600, 400, "Test window");
 
 		while (true) {
 			CodaWindow::GetWindow()->SwapBuffers();
-			
+			//gameWindow.SwapBuffers();
 
 			OnUpdate();
 		}

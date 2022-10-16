@@ -15,7 +15,7 @@ namespace Coda
 		void Create(int width, int height, const std::string& windowName);
 		void SwapBuffers();
 	private:
-		CodaWindow();
+		//CodaWindow();
 		inline static CodaWindow* mInstance{ nullptr };
 		WindowImplementation* mImplementation{ nullptr };
 	};

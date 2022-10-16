@@ -33,7 +33,7 @@
     <ClInclude Include="WindowImplementation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GLFWcode\GLFWwindow.h">
+    <ClInclude Include="GLFWcode\GLFWimplementation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -45,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CodaWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLFWcode\GLFWimplementation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
