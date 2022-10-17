@@ -19,8 +19,8 @@ namespace Coda {
 		}
 	}
 
-	WindowImplementation* CodaWindow::GetWindow() {
-		return mInstance->mImplementation;
+	CodaWindow* CodaWindow::GetWindow() {
+		return mInstance;
 	}
 
 	void CodaWindow::Create(int width, int height, const std::string& windowName) {
