@@ -14,7 +14,7 @@ namespace Coda {
 		CODA_LOG("Coda running...");
 
 		CodaWindow::Init();
-		CodaWindow::GetWindow()->Create(600, 400, "Test window");
+		CodaWindow::GetWindow()->Create(600, 400, "TestWindow");
 		//CodaWindow gameWindow;
 		//gameWindow.Create(600, 400, "Test window");
 

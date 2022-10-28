@@ -1,6 +1,9 @@
 #include "pch.h"
 
+#include "glad/glad.h"
 #include "GLFWimplementation.h"
+#include "CodaUtil.h"
+
 
 namespace Coda {
 	GLFWimplementation::GLFWimplementation() {
@@ -12,6 +15,12 @@ namespace Coda {
 
 	void GLFWimplementation::Create(int width, int height, const std::string& windowName) {
 		mWindow = glfwCreateWindow(width, height, windowName.c_str(), NULL, NULL);
+
+		glfwMakeContextCurrent(mWindow);
+
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+			CODA_LOG("Failed to initialize GLAD");
+		}
 	}
 	void GLFWimplementation::SwapBuffers() {
 		glfwSwapBuffers(mWindow);
