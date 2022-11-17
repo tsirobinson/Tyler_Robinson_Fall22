@@ -124,3 +124,10 @@ namespace Coda {
 	
 	}
 }
+
+/*
+	Coda::Picture pic1{"Assets/pic1.png"};
+	Coda::Shader shade{"Assets/vertex.glsl", "Assets/fragment.glsl"};
+
+	Coda::Renderer::Draw(pic1, shade, 110, 222, 10);
+*/
