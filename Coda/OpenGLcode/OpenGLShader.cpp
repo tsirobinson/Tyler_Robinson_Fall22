@@ -125,6 +125,8 @@ namespace Coda {
 	void OpenGLShader::ProvideFloatValues(const std::string& valueName, const std::vector<float>& vals) {
 		GLint location{ glGetUniformLocation(mShaderProg, valueName.c_str()) };
 
+		Activate();
+
 		switch (vals.size()) {
 		case 1:
 			glUniform1f(location, vals[0]);
@@ -145,6 +147,8 @@ namespace Coda {
 
 	void OpenGLShader::ProvideFloatValues(std::string&& valueName, const std::vector<float>& vals) {
 		GLint location{ glGetUniformLocation(mShaderProg, valueName.c_str()) };
+
+		Activate();
 
 		switch (vals.size()) {
 		case 1:
