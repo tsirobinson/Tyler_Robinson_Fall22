@@ -25,9 +25,20 @@ namespace Coda {
 
 	void CodaWindow::Create(int width, int height, const std::string& windowName) {
 		mImplementation->Create(width, height, windowName);
+
+		mWidth = width;
+		mHeight = height;
 	}
 
 	void CodaWindow::SwapBuffers() {
 		mImplementation->SwapBuffers();
+	}
+
+	int CodaWindow::GetWidth() const {
+		return mWidth;
+	}
+
+	int CodaWindow::GetHeight() const {
+		return mHeight;
 	}
 }
