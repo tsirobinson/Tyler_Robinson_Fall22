@@ -24,8 +24,7 @@ namespace Coda {
 
 		while (true) {
 			
-			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        	glClear(GL_COLOR_BUFFER_BIT);
+			Renderer::Clear();
 			
 			Renderer::Draw(pic, 100, 100, 1);
 			

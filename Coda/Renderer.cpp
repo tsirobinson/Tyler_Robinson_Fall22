@@ -13,8 +13,16 @@ namespace Coda {
 		return mInstance;
 	}
 
+	void Renderer::Draw(Picture& picture, int x, int y, int z) {
+		GetRenderer()->mImplementation->Draw(picture, x, y, z, GetRenderer()->mInstance->mDefaultShader);
+	}
+
 	void Renderer::Draw(Picture& picture, int x, int y, int z, Shader& shader) {
 		GetRenderer()->mImplementation->Draw(picture, x, y, z, shader);
+	}
+
+	void Renderer::Clear() {
+		GetRenderer()->mImplementation->Clear();
 	}
 
 	Renderer::Renderer() {

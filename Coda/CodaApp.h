@@ -7,5 +7,8 @@ namespace Coda
 	public:
 		virtual void OnUpdate();
 		void Run();
+
+	private:
+		std::chrono::milliseconds mFrameDuration;
 	};
 }

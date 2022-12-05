@@ -16,6 +16,6 @@ namespace Coda {
 		void ProvideFloatValues(std::string&& valueName, std::vector<float>&& vals);
 
 	private:
-		ShaderImplementation* mImplementation;
+		ShaderImplementation* mImplementation{ nullptr };
 	};
 }

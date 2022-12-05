@@ -11,7 +11,10 @@ namespace Coda {
 		static void Init();
 		static Renderer* GetRenderer();
 
-		static void Draw(Picture& picture, int x, int y, int z, Shader& shader = mDefaultShader);
+		static void Draw(Picture& picture, int x, int y, int z);
+		static void Draw(Picture& picture, int x, int y, int z, Shader& shader);
+
+		static void Clear();
 
 	private:
 		inline static Renderer* mInstance{ nullptr };
@@ -20,7 +23,7 @@ namespace Coda {
 
 		Renderer();
 
-		inline static Shader mDefaultShader{ "Assets/Shaders/defaultCodaVertex.glsl", 
+		Shader mDefaultShader{ "Assets/Shaders/defaultCodaVertex.glsl", 
 			"Assets/Shaders/defaultCodaFragment.glsl" };
 	};
 }
