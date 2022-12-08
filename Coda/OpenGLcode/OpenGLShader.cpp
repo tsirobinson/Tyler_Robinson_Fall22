@@ -47,7 +47,9 @@ namespace Coda {
 			glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
 			CODA_LOG(infoLog);
 		}
+		
 
+		mShaderProg = glCreateProgram();
 		glAttachShader(mShaderProg, vertexShader);
 		glAttachShader(mShaderProg, fragmentShader);
 		glLinkProgram(mShaderProg);

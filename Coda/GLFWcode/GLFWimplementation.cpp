@@ -21,6 +21,23 @@ namespace Coda {
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 			CODA_LOG("Failed to initialize GLAD");
 		}
+
+		glfwSetWindowUserPointer(mWindow, &mCallbacks);
+
+		glfwSetKeyCallback(mWindow, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
+			if (action == GLFW_PRESS || action == GLFW_REPEAT) {
+				Callbacks* userPointer{ (Callbacks*)glfwGetWindowUserPointer(window) };
+
+				KeyPressedEvent event{ key };
+				userPointer->keyPressedCallback(event);
+			}
+			else if (action == GLFW_RELEASE) {
+				Callbacks* userPointer{ (Callbacks*)glfwGetWindowUserPointer(window) };
+
+				KeyReleasedEvent event{ key };
+				userPointer->keyReleasedCallback(event);
+			}
+		});
 	}
 	void GLFWimplementation::SwapBuffers() {
 		glfwSwapBuffers(mWindow);
@@ -28,5 +45,13 @@ namespace Coda {
 	GLFWimplementation::~GLFWimplementation()
 	{
 		glfwTerminate();
+	}
+
+	void GLFWimplementation::SetKeyPressedCallback(std::function<void(const KeyPressedEvent&)> keyPressedCallback) {
+		mCallbacks.keyPressedCallback = keyPressedCallback;
+	}
+
+	void GLFWimplementation::SetKeyReleasedCallback(std::function<void(const KeyReleasedEvent&)> keyReleasedCallback) {
+		mCallbacks.keyReleasedCallback = keyReleasedCallback;
 	}
 }

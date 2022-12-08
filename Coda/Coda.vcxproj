@@ -139,7 +139,9 @@
     <ClInclude Include="CodaApp.h" />
     <ClInclude Include="CodaUtil.h" />
     <ClInclude Include="CodaWindow.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="GLFWcode\GLFWimplementation.h" />
+    <ClInclude Include="Keys.h" />
     <ClInclude Include="OpenGLcode\OpenGLPicture.h" />
     <ClInclude Include="OpenGLcode\OpenGLRenderer.h" />
     <ClInclude Include="OpenGLcode\OpenGLShader.h" />
@@ -155,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="CodaApp.cpp" />
     <ClCompile Include="CodaWindow.cpp" />
+    <ClCompile Include="Event.cpp" />
     <ClCompile Include="GLFWcode\GLFWimplementation.cpp" />
     <ClCompile Include="OpenGLcode\OpenGLPicture.cpp" />
     <ClCompile Include="OpenGLcode\OpenGLRenderer.cpp" />

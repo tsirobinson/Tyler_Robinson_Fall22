@@ -3,10 +3,10 @@
 #include "CodaApp.h"
 #include "CodaUtil.h"
 #include "CodaWindow.h"
-#include "glad/glad.h"
 #include "Picture.h"
 #include "Renderer.h"
-
+#include "Event.h"
+#include "Keys.h"
 
 namespace Coda {
 	void CodaApp::OnUpdate() {
@@ -19,17 +19,32 @@ namespace Coda {
 		CodaWindow::Init();
 		CodaWindow::GetWindow()->Create(600, 400, "TestWindow");
 
-		Picture pic{ "Assets/Textures/test.png" };
+		
 		Renderer::Init();
+
+		mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
+
+		int x{200}, y{ 200 };
+		CodaWindow::GetWindow()->SetKeyPressedCallback([&](const KeyPressedEvent& event) {
+			if (event.GetKeyCode() == CODA_KEY_LEFT) x -= 10;
+			else if (event.GetKeyCode() == CODA_KEY_RIGHT) x += 10; 
+		});
+
+		Picture pic{ "Assets/Textures/test.png" };
 
 		while (true) {
 			
 			Renderer::Clear();
-			
+
+			OnUpdate();
+
 			Renderer::Draw(pic, 100, 100, 1);
 			
+			std::this_thread::sleep_until(mNextFrameTime);
+
 			CodaWindow::GetWindow()->SwapBuffers();
-			OnUpdate();
+			
+			mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
 		}
 
 	

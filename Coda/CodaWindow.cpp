@@ -41,4 +41,12 @@ namespace Coda {
 	int CodaWindow::GetHeight() const {
 		return mHeight;
 	}
+
+	void CodaWindow::SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback) {
+		mImplementation->SetKeyPressedCallback(keyPressedCallback);
+	}
+
+	void CodaWindow::SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback) {
+		mImplementation->SetKeyReleasedCallback(keyReleasedCallback);
+	}
 }

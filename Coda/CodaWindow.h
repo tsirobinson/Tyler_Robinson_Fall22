@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "CodaUtil.h"
 #include "WindowImplementation.h"
+#include "Event.h"
 
 namespace Coda
 {
@@ -17,6 +18,9 @@ namespace Coda
 
 		int GetWidth() const;
 		int GetHeight() const;
+
+		void SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback);
+		void SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback);
 
 	private:
 		inline static CodaWindow* mInstance{ nullptr };
