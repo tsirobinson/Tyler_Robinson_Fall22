@@ -66,4 +66,8 @@ namespace Coda {
     void OpenGLPicture::Activate() {
         glBindTexture(GL_TEXTURE_2D, mImage);
     }
+
+    OpenGLPicture::~OpenGLPicture() {
+        glDeleteTextures(1, &mImage);
+    }
 }

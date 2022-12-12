@@ -1,10 +1,30 @@
 set(SOURCE_FILES
+	Event.cpp
+	OpenGLcode/OpenGLPicture.cpp
+	OpenGLcode/OpenGLShader.cpp
+	OpenGLcode/OpenGLRenderer.cpp
+	Picture.cpp
+	Shader.cpp
+	Renderer.cpp
+	Unit.cpp
 	CodaApp.cpp
 	CodaWindow.cpp
 	GLFWcode/Glfwimplementation.cpp
 )
 
 set(HEADER_FILES
+	Event.h
+	Keys.h
+	OpenGLcode/OpenGLPicture.h
+	OpenGLcode/OpenGLShader.h
+	OpenGLcode/OpenGLRenderer.h
+	Picture.h
+	Shader.h
+	Renderer.h
+	PictureImplementation.h
+	ShaderImplementation.h
+	RendererImplementation.h
+	Unit.h
 	Coda.h
 	CodaApp.h
 	CodaUtil.h
@@ -21,5 +41,7 @@ target_precompile_headers(Coda PRIVATE pch.h)
 
 include_directories(../glfw/include/)
 include_directories(../Coda)
+include_directories(../glad/include)
+include_directories(../stbi)
 
-target_link_libraries(Coda glfw)
+target_link_libraries(Coda glfw glad stbi)

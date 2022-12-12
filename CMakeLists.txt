@@ -16,10 +16,16 @@ else()
 endif()
 
 add_definitions(-DCODA_DEBUG)
-
+add_definitions(-DCODA_OPENGL)
 
 add_subdirectory(GEFall22)
 add_subdirectory(Coda)
 add_subdirectory(glfw)
+add_subdirectory(glad)
+add_subdirectory(stbi)
 
 set(VS_STARTUP_PROJECT GEFall22)
+
+file(COPY GEFall22/Assets DESTINATION ${PROJECT_BINARY_DIR}/GEFall22)
+file(COPY GEFall22/Assets DESTINATION ${PROJECT_BINARY_DIR}/Debug)
+file(COPY GEFall22/Assets DESTINATION ${PROJECT_BINARY_DIR}/Release)

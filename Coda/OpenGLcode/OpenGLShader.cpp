@@ -169,4 +169,8 @@ namespace Coda {
 			CODA_LOG("ERROR: Shader values must be vectors of size 1-4!")
 		}
 	}
+
+	OpenGLShader::~OpenGLShader() {
+		glDeleteProgram(mShaderProg);
+	}
 }

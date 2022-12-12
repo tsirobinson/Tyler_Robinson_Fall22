@@ -10,11 +10,12 @@ namespace Coda
 	class CODA_API CodaApp
 	{
 	public:
+		CodaApp();
 		virtual void OnUpdate();
 		void Run();
 
 	private:
-		std::chrono::milliseconds mFrameDuration{ std::chrono::seconds{1} / FRAMES_PER_SECOND };
+		std::chrono::milliseconds mFrameDuration{ 1000 / FRAMES_PER_SECOND };
 		std::chrono::steady_clock::time_point mNextFrameTime;
 	};
 }

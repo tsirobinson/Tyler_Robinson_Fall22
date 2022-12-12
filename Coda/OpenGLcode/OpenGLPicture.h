@@ -13,6 +13,8 @@ namespace Coda {
 		virtual int GetWidth() const override;
 
 		virtual void Activate() override;
+
+		~OpenGLPicture();
 	
 	private:
 		unsigned int mImage{ 0 };

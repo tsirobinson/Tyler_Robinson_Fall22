@@ -152,6 +152,7 @@
     <ClInclude Include="RendererImplementation.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderImplementation.h" />
+    <ClInclude Include="Unit.h" />
     <ClInclude Include="WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +170,7 @@
     <ClCompile Include="Picture.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\glad\glad.vcxproj">

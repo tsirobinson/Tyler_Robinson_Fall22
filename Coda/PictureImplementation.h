@@ -9,7 +9,8 @@ namespace Coda {
 		virtual int GetWidth() const = 0;
 
 		virtual void Activate() = 0;
-	private:
+
+		virtual ~PictureImplementation() {};
 
 	};
 }
