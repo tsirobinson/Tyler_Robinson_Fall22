@@ -9,7 +9,7 @@ set(SOURCE_FILES
 	Unit.cpp
 	CodaApp.cpp
 	CodaWindow.cpp
-	GLFWcode/Glfwimplementation.cpp
+	GLFWcode/GLFWimplementation.cpp
 )
 
 set(HEADER_FILES
