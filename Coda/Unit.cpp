@@ -6,7 +6,7 @@ namespace Coda {
 
 	}
 
-	Unit::Unit(std::string& picFile, int hp) : mPicture(picFile), mHp(hp) {
+	Unit::Unit(std::string& picFile, int hp) : mPicture(picFile), mHP(hp) {
 
 	}
 

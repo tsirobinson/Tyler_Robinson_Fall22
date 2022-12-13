@@ -2,6 +2,7 @@
 
 #include "CodaUtil.h"
 #include "Picture.h"
+#include "Renderer.h"
 
 namespace Coda {
 	class CODA_API Unit {

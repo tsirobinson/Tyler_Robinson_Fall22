@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Renderer.h"
 #include "OpenGLcode/OpenGLRenderer.h"
+#include "CodaUtil.h"
 
 namespace Coda {
 	void Renderer::Init() {

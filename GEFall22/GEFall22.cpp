@@ -15,10 +15,13 @@ public:
 		
 		Coda::CodaWindow::GetWindow()->SetKeyReleasedCallback(
 			[this](const Coda::KeyReleasedEvent& event) {OnKeyRelease(event); });
+		
+		Coda::Renderer::Draw(m_Background, 0, 0, 1);
+		
 	}
 
 	void OnUpdate() override {
-
+		
 	}
 
 private:
