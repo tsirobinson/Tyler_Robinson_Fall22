@@ -2,7 +2,7 @@
 #include "Unit.h"
 
 namespace Coda {
-	Unit::Unit(const std::string& picFile, int hp) : mPicture(picFile), mHp(hp) {
+	Unit::Unit(const std::string& picFile, int hp) : mPicture(picFile), mHP(hp) {
 
 	}
 
