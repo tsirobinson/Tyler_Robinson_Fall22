@@ -1,2 +1,3 @@
 # Coda Game Engine (Tyler Robinson)
-Fall22 doesn't default as startup project after building with CMake strangely. You'll have to select it manually
+##Basics
+Control the character with the arrow keys and collect the three stars without touching one of the enemies
