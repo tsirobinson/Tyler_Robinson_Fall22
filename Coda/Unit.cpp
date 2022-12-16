@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Unit.h"
+#include "CodaWindow.h"
 
 namespace Coda {
 	Unit::Unit(const std::string& picFile, int hp) : mPicture(picFile), mHP(hp) {
@@ -18,11 +19,19 @@ namespace Coda {
 
 	int Unit::ChangeX(int xDiff) {
 		mXcoord += xDiff;
+		if (mXcoord + mPicture.GetWidth() > CodaWindow::GetWindow()->GetWidth())
+			mXcoord = CodaWindow::GetWindow()->GetWidth() - mPicture.GetWidth();
+		else if (mXcoord < 0)
+			mXcoord = 0;
 		return mXcoord;
 	}
 
 	int Unit::ChangeY(int yDiff) {
 		mYcoord += yDiff;
+		if (mYcoord + mPicture.GetHeight() > CodaWindow::GetWindow()->GetHeight())
+			mYcoord = CodaWindow::GetWindow()->GetHeight() - mPicture.GetHeight();
+		else if (mYcoord < 0)
+			mYcoord = 0;
 		return mYcoord;
 	}
 

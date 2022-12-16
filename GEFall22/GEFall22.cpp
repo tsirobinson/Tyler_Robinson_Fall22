@@ -100,7 +100,6 @@ public:
 			if (m_Character.OverlapsWith(m_Stars[i])) {
 				m_Stars.erase(m_Stars.begin() + i);
 				m_Score++;
-				m_Character.SetCoord(200, 100, 1);
 				m_GameDisplay.AddPoint();
 				CODA_LOG("Collected star.");
 			}
@@ -191,7 +190,7 @@ private:
 				m_State = CharState::STILL;
 			break;
 		case CODA_KEY_RIGHT:
-			if (m_State == CharState::MOVE_LEFT)
+			if (m_State == CharState::MOVE_RIGHT)
 				m_State = CharState::STILL;
 			break;
 		case CODA_KEY_UP:
