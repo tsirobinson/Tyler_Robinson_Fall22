@@ -56,6 +56,7 @@ namespace Coda {
 
 		if (mInstance != nullptr) {
 			delete mInstance;
+			mInstance = nullptr;
 		}
 	}
 }

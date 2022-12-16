@@ -12,6 +12,7 @@ namespace Coda
 	public:
 		CodaApp();
 		virtual void OnUpdate();
+		virtual bool CheckGameOver() = 0;;
 		void Run();
 
 	private:

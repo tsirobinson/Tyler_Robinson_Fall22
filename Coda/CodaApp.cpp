@@ -28,6 +28,13 @@ namespace Coda {
 
 		while (true) {
 			
+			if (CheckGameOver()) {
+				//OnUpdate();
+				CODA_LOG("Closing game.");
+				std::this_thread::sleep_for(std::chrono::seconds(2));
+				break;
+			}
+
 			Renderer::Clear();
 
 			OnUpdate();
@@ -38,6 +45,8 @@ namespace Coda {
 			
 			mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
 		}
+
+		CodaWindow::CloseWindow();
 
 	
 	}
