@@ -12,5 +12,7 @@ namespace Coda {
 		virtual void SetKeyPressedCallback(std::function<void(const KeyPressedEvent&)> keyPressedCallback) = 0;
 		virtual void SetKeyReleasedCallback(std::function<void(const KeyReleasedEvent&)> keyReleasedCallback) = 0;
 
+		virtual ~WindowImplementation() {};
+
 	};
 }

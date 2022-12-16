@@ -52,6 +52,11 @@ namespace Coda {
 		return mHP;
 	}
 
+	void Unit::Draw()
+	{
+		Renderer::GetRenderer()->Draw(mPicture, mXcoord, mYcoord, mZcoord);
+	}
+
 	bool Unit::OverlapsWith(const Unit& other) const {
 		int oneLeft{ GetX() };
 		int oneRight{ GetX() + mPicture.GetWidth() };

@@ -22,6 +22,8 @@ namespace Coda
 		void SetKeyPressedCallback(const std::function<void(const KeyPressedEvent&)>& keyPressedCallback);
 		void SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback);
 
+		static void CloseWindow();
+
 	private:
 		inline static CodaWindow* mInstance{ nullptr };
 

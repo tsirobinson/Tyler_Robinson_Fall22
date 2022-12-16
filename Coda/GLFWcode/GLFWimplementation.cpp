@@ -41,6 +41,7 @@ namespace Coda {
 	}
 	void GLFWimplementation::SwapBuffers() {
 		glfwSwapBuffers(mWindow);
+		glfwPollEvents();
 	}
 	GLFWimplementation::~GLFWimplementation()
 	{

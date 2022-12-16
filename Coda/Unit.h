@@ -23,6 +23,8 @@ namespace Coda {
 		int ChangeHP(int hpDiff);
 		int GetHP() const;
 
+		void Draw();
+
 		bool OverlapsWith(const Unit& other) const;
 
 	private:

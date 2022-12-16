@@ -49,4 +49,13 @@ namespace Coda {
 	void CodaWindow::SetKeyReleasedCallback(const std::function<void(const KeyReleasedEvent&)>& keyReleasedCallback) {
 		mImplementation->SetKeyReleasedCallback(keyReleasedCallback);
 	}
+
+	void CodaWindow::CloseWindow()
+	{
+		mInstance->mImplementation->~WindowImplementation();
+
+		if (mInstance != nullptr) {
+			delete mInstance;
+		}
+	}
 }

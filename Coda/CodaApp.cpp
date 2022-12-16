@@ -12,7 +12,7 @@
 namespace Coda {
 	CodaApp::CodaApp() {
 		CodaWindow::Init();
-		CodaWindow::GetWindow()->Create(1000, 800, "TestWindow");
+		CodaWindow::GetWindow()->Create(1000, 800, "CODA");
 
 		Renderer::Init();
 	}
