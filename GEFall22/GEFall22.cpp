@@ -66,6 +66,7 @@ public:
 
 		Coda::Renderer::Draw(m_Background, 0, 0, 1);
 
+		//Move character
 		switch (m_State) {
 		case CharState::MOVE_LEFT:
 			m_Character.ChangeX(-10);
